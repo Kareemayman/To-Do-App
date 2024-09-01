@@ -4,15 +4,17 @@ const inputText = document.querySelector("input[type=text]")
 const ul = document.querySelector("ul")
 
 add.addEventListener("click", (e) => {
-  let newItem = document.createElement("li")
-  newItem.innerHTML = `<div>
+  if (inputText.value != "") {
+    let newItem = document.createElement("li")
+    newItem.innerHTML = `<div>
   <input type='checkbox'>
   <label>${inputText.value}</label>
   </div>
   <button class='del'>Delete</button>`
-  ul.appendChild(newItem)
+    ul.appendChild(newItem)
 
-  inputText.value = ""
+    inputText.value = ""
+  }
 })
 
 clear.addEventListener("click", (e) => {
