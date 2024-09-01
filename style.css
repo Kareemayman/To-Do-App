@@ -121,6 +121,10 @@ ul li label:hover {
     cursor: pointer;
 }
 
+ul li input[type='checkbox'] {
+    cursor: pointer;
+}
+
 /* 
 @media (min-width: 769) {
     .container {
